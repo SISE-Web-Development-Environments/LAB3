@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Example 4</title>
+	<script type="text/javascript"> 
+	var arr = new Array("morning" , "day" , "night ");
+	document.writeln("<h2>Before sorting :</h2>" + arr.join());
+	arr.sort(stringCompare);
+    document.writeln("<h2>After sorting :</h2>" + arr.join());
+    
+    
+   function stringCompare(a, b)
+   {
+       return  (a.length - b.length);
+   }
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>

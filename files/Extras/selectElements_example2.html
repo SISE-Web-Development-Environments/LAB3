@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<HEAD>
+<TITLE>Object Model</TITLE>
+
+<script type="text/javascript">
+   var elements = "<UL>";
+
+   function child( object ) 
+   {   
+      var loop = 0;
+
+      elements += "<LI>" + object.tagName + "<UL>"; 
+
+      for( loop = 0; loop < object.children.length; loop++ ) {
+      
+         if ( object.children[loop].children.length >0 )         
+            child( object.children[ loop ] );
+         else
+            elements += "<LI>" + object.children[ loop ].tagName 
+                        + "</LI>";
+      }
+
+      elements += " </UL> ";
+   }
+</SCRIPT>
+</HEAD>
+
+<BODY ONLOAD = "child( document.all[ 1 ] ); 
+                myDisplay.outerHTML += elements;">
+
+<P>Welcome to our <STRONG>Web</STRONG> page!</P>
+
+<P ID = "myDisplay">
+Elements on this Web page:
+</P>
+
+</BODY>
+</HTML>

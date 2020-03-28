@@ -1,0 +1,33 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+<script type="text/javascript">
+function init(){
+	 document.body.style.backgroundColor = window.dialogArguments;
+						
+}
+function closeWin(){
+
+	window.returnValue = txtColor.value;
+	window.close();
+}
+
+</script>
+</HEAD>
+<BODY bgcolor=yellow onload=init()>
+
+	<table>
+		<tr>
+			<td>
+				<input type=text value="insert color" id="txtColor">
+			</td>
+			<td>
+				<input type=button value="click to open window" onclick=closeWin()>
+			</td>
+		</tr>
+
+		</table>
+
+</BODY>
+</HTML>

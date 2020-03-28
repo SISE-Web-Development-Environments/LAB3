@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title></title>
+	</head>
+		<script language=javascript>
+
+			var day_arr = new Array("Sunday" , "Monday" , "Tuesday" , "Wednesday" , "Thursday" , "Friday", "Saturday");
+			var month_arr = new Array("January" , "February" , "March" , "April" , "May" , "June" , "July" , "August" , "September" , "October" , "November" , "December");
+			var interval ;
+		
+			function init(){
+				interval = window.setInterval("manipulateDate()", 1000);
+				start.disabled = true;
+				stop.disabled = false;
+			}
+			
+			function stop(){
+				window.clearInterval(interval);
+				stop.disabled = true;
+				start.disabled = false;
+				
+			}
+			function manipulateDate(){
+				var date1 = new Date();
+				var str ="the date now is : " + day_arr[date1.getDay()] + " , " + date1.getDate();
+				str+="of " + month_arr[date1.getMonth()];
+				str+=" , " + date1.getYear();
+				first.innerHTML = str;
+				var str2 = "it's been ";
+				str2 += date1.getTime();
+				str2 += " milliseconds since January 1 ,1970";
+				second.innerHTML = str2;
+ 				var str3 = "the time now is : " ;
+				str3 += date1.getHours() + ":" ;
+				str3 += date1.getMinutes() + ":" ;
+				str3 += date1.getSeconds();
+				third.innerHTML = str3;
+
+			}
+		</script>
+	<body bgcolor=offwhite onload="manipulateDate();init()">
+		<table>
+			<tr>
+				<td >
+					<div id=first></div>	 	 
+				</td>
+			</tr>
+			<tr>
+				<td >
+					<div id=second></div>	 
+				</td>
+			</tr>
+			<tr>
+				<td >
+					<div id=third></div>	 	 
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input id=stop type=button value="Stop" onclick=stop() />
+					<input id=start type=button value="Start" onclick=init() />
+				</td>
+			</tr>
+		</table>
+		
+	</body>
+</html>

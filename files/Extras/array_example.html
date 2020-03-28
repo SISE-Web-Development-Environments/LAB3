@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<!-- Fig. 17.4: InitArray.html -->
+
+<HEAD>
+<TITLE>Initializing an Array with a Declaration</TITLE>
+
+<SCRIPT LANGUAGE = "JavaScript">
+
+start();
+   function start()
+   {
+      // Initializer list specifies number of elements and
+      // value for each element.
+      var colors = new Array( "cyan", "magenta", 
+                              "yellow", "black" );
+      var integers1 = [ 2, 4, 6, 8 ];
+      var integers2 = [ 2, , , 8 ];
+   
+      outputArray( "Array colors contains", colors );
+      outputArray( "Array integers1 contains", integers1 );
+      outputArray( "Array integers2 contains", integers2 );
+   }
+   
+   // output "header" followed by a two-column table 
+   // containing subscripts and elements of "theArray"  
+   function outputArray( header, theArray )
+   {
+      document.writeln( "<H2>" + header + "</H2>" );
+      document.writeln( "<TABLE BORDER = '1' WIDTH = '100%'>" );
+      document.writeln( "<TR><TD WIDTH = '100'><B>Subscript</B>" 
+                        + "<TD><B>Value</B></TR>" );                        
+   
+  for ( var element in theArray ) 
+         document.writeln( "<TR><TD>" + element  + "<TD>" + 
+                           theArray[ element  ] + "</TR>" );
+
+      document.writeln( "</TABLE>" );
+   }
+</SCRIPT>
+
+</HEAD><BODY></BODY>
+</HTML>
+
+
+<!-- 
+ ************************************************************************** 
+ * (C) Copyright 1999 by Deitel & Associates, Inc. and Prentice Hall.     *
+ * All Rights Reserved.                                                   *
+ *                                                                        *
+ * DISCLAIMER: The authors and publisher of this book have used their     *
+ * best efforts in preparing the book. These efforts include the          *
+ * development, research, and testing of the theories and programs        *
+ * to determine their effectiveness. The authors and publisher make       *
+ * no warranty of any kind, expressed or implied, with regard to these    *
+ * programs or to the documentation contained in these books. The authors *
+ * and publisher shall not be liable in any event for incidental or       *
+ * consequential damages in connection with, or arising out of, the       *
+ * furnishing, performance, or use of these programs.                     *
+ **************************************************************************
+-->

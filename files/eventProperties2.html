@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title></title>
+		<script type="text/javascript">
+			
+			function tableOnClick(elemName){
+				alert("the "+ elemName + " element was also clicked")
+			}
+
+			function pOnClick(){
+				//alert("The P element was clicked")
+				alert("The " + window.event.srcElement.tagName + " element was clicked");
+				
+			}
+
+
+
+		</script>
+	</head>
+
+	<body bgcolor=green>
+		<table align=center cellspacing=1 cellpadding=1 border=1 bgcolor=lightgreen onclick=tableOnClick("table")>
+			<tr onclick=tableOnClick("tr")>
+				<td >
+					<p onclick=pOnClick()>Click Me</p>
+				</td>
+			</tr>
+		</table>
+
+	</body>
+</html>

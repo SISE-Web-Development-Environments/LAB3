@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Example 10</title>
+<script type="text/javascript">
+
+var interval=0;
+
+function start()
+{
+ var intevalId = window.setInterval("setDateNow()", 1000 );
+ return intevalId;
+}
+function setDateNow()
+{ 
+	var date = new Date();	
+	var hours = date.getHours();
+	var minutes = date.getMinutes();
+	var sec=date.getSeconds();
+	var currentTimeString="The time is : " + hours + ":" + minutes + ":" +  sec;
+	document.getElementById("clock").innerText = currentTimeString;
+}
+
+function setToRed ( )
+{
+  document.getElementById("colourButton").style.color = "#FF0000";
+  setTimeout ( "setToBlack()", 2000 );
+}
+
+function setToBlack ( )
+{
+  document.getElementById("colourButton").style.color = "#000000";
+}
+
+function clockIt()
+{
+
+ if(document.getElementById("btnStop").value == "Start clock")
+ {
+	interval = start();
+	document.getElementById("btnStop").value="Stop clock";
+ }
+ else 
+ {
+	 clearInterval(interval);
+	 document.getElementById("btnStop").value="Start clock";
+
+ }
+ 
+}
+
+</script>
+</head>
+
+<body>
+
+<span id="clock">&nbsp;</span><br />
+<input id="colourButton" name="clickMe" onclick="setToRed()" type="button" value="Click me and wait!" /><br/>
+<input id="btnStop" type="button" value="Start clock" onclick="clockIt()"/>
+
+</body>
+
+</html>

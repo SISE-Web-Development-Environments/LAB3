@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>A Programmer-Defined square Function</TITLE>
+
+
+<SCRIPT type="text/javascript" language=JavaScript>
+
+	document.write("<H1>Example Scope:</H1>" );
+
+   let x = 5;
+   let y = 6;
+   
+   document.write(x + "<br>");
+   document.write(y + "<br>");
+   
+   f();
+   
+   function f()
+   {
+	let x = 8;
+	document.write(x + "<br>");
+	
+	document.write(this.x + "<br>");
+   }
+   
+   document.write(x + "<br>");
+     
+     
+   </SCRIPT>
+
+</HEAD>
+
+<BODY>
+</BODY></HTML>

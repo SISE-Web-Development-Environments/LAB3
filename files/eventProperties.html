@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 6.0">
+<TITLE></TITLE>
+</HEAD>
+<script type="text/javascript">
+
+var mouse_positions_arr = new Array("Left button" , "Middle button" , "Right button ");
+
+function moveParams(){
+
+	
+	
+	l1.innerText = window.event.clientX;
+	l2.innerText = window.event.clientY;
+	l3.innerText = window.event.offsetX;
+	l4.innerText = window.event.offsetY;
+	l5.innerText = window.event.screenX;
+	l6.innerText = window.event.screenY;
+	}
+
+
+function showButton(){
+
+	alert (mouse_positions_arr [window.event.button]  + " was pressed!"); 
+	var src = window.event.type;
+	alert(src);
+}
+</script>
+
+<BODY bgcolor=Plum>
+<hr>
+	<table border=1 width=80% height=80%>
+		<tr>
+		<td>
+	<div style="position:relative;width:100%;height:100%"  id=mDiv onmousemove=moveParams() onmousedown=showButton()></div>
+	</td>
+	</tr>
+	</table>
+	
+	<table width=80% height=20%>
+		<tr>
+			<td><label>clientX</label></td>
+			<td><label>clientY</label></td>
+			<td><label>offsetX</label></td>
+			<td><label>offsetY</label></td>
+			<td><label>screenX</label></td>
+			<td><label>screenY</label></td>
+		</tr>
+		<tr>
+			<td><label id=l1></label></td>
+			<td><label id=l2></label></td>
+			<td><label id=l3></label></td>
+			<td><label id=l4></label></td>
+			<td><label id=l5></label></td>
+			<td><label id=l6></label></td>
+	</table>
+<P>&nbsp;</P>
+
+</BODY>
+</HTML>

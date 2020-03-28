@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script language="javascript">
+		function doArr(){
+			var arr = new Array("doggy" , "cat" , "fish" , "wolf");
+			document.write(arr);
+			arr.sort();
+			document.write("<br>"+ arr);
+			arr.sort(compareNumbers);
+			document.write("<br>"+ arr);
+			
+		}
+		function compareNumbers(a, b) {
+			return a.length - b.length
+		}
+	
+	
+		</script>
+	</head>
+	<body>
+		<script language="javascript">
+			doArr();
+		</script>
+	</body>
+</html>

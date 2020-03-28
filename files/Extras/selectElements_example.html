@@ -1,0 +1,23 @@
+<HTML>
+<HEAD>
+<TITLE>Object Model</TITLE>
+
+<SCRIPT LANGUAGE = "JavaScript">
+   var elements = "";
+
+   function start() 
+   {
+      for ( var loop = 0; loop < document.all.length; loop++ ) 
+         elements += "<BR>" + document.all[ loop ].tagName;
+
+      pText.innerHTML += elements;
+   }
+</SCRIPT>
+</HEAD>
+
+<BODY ONLOAD = "start()">
+
+<P ID = "pText">Elements on this Web page:</P>
+
+</BODY>
+</HTML>

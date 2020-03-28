@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+	<script type="text/javascript">				
+		function openWin(){
+			var color = txtColor.value;
+			var retColor = window.showModalDialog("son_modal.html",color,"height=400,weight=500,location=no,menubar=no,resizable=no");
+			document.body.style.backgroundColor = retColor;
+			 
+		}
+
+	
+	</script>
+</head>
+
+<body>
+	<p id=pNav></p>
+	<table>
+		<tr>
+			<td>
+				<input type=text value="insert color" id="txtColor">
+			</td>
+			<td>
+				<input type=button value="click to open window" onclick=openWin()>
+			</td>
+		</tr>
+
+		</table>
+	
+
+
+
+</body>
+</html>

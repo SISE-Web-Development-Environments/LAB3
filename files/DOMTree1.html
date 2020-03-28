@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>DOM Tree</title>
+<script type="text/javascript">
+function Change() {
+var b=document.children[0].children[1].children[1];
+
+b.innerText="Hello 2019"; }
+</script>
+</head>
+<body>
+<div id="myDiv"></div>
+<p id="pip" onclick="Change()">Click to change text....</p>
+</body>
+</html>

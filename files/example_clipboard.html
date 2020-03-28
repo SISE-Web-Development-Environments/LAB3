@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function CopyToClipboard () {
+            var input = document.getElementById ("toClipboard");
+            window.clipboardData.setData ("Text", input.value);
+        }
+        function ShowClipboardContent () {
+            alert (window.clipboardData.getData ("Text"));
+        }
+        function ClearClipboard () {
+            window.clipboardData.clearData ("Text");
+        }
+    </script>
+</head>
+<body>
+    <input id="toClipboard" value="text to clipboard"/>
+    <button onclick='CopyToClipboard ()'>Copy text to clipboard</button>
+    <br /><br />
+    <button onclick='ShowClipboardContent ();'>Show text data in clipboard</button>
+    <button onclick='ClearClipboard ();'>Clear text data from clipboard</button>
+</body>
+
+</html>

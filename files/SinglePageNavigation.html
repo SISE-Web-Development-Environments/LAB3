@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Single Page Navigation</title>
+    <style type="text/css">
+header
+{
+	background: #0f0;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 800px;
+	height: 100px;
+}
+nav
+{
+	background: #f00;
+	position: absolute;
+	top: 100px;
+	left: 0px;
+	width: 150px;
+	height: 500px;
+}
+aside
+{
+	background: #f00;
+	position: absolute;
+	top: 100px;
+	left: 650px;
+	width: 150px;
+	height: 500px;
+}
+section
+{
+	background: #fff;
+	position: absolute;
+	top: 100px;
+	left: 150px;
+	width: 500px;
+	height: 500px;
+}
+footer
+{
+	background: #0f0;
+	position: absolute;
+	top: 500px;
+	left: 0px;
+	width: 800px;
+	height: 100px;
+}      
+    </style>
+    <script type="text/javascript">
+    function PageLoaded()
+    {
+    	ShowSection('section1');
+    }
+    function ShowSection(id)
+    {
+    	//hide all sections
+    	var section1 = document.getElementById('section1');
+    	section1.style.visibility="hidden";
+    	var section2 = document.getElementById('section2');
+    	section2.style.visibility="hidden";
+		var section3 = document.getElementById('section3');
+    	section3.style.visibility="hidden";
+		var section4 = document.getElementById('section4');
+    	section4.style.visibility="hidden";
+    	
+    	//show only one section
+		var selected = document.getElementById(id);
+    	selected .style.visibility="visible";
+    }
+
+   </script>
+
+</head>
+<body onload="PageLoaded()">
+    <header>
+      <a onclick="ShowSection('section1')" href="#">Section 1</a>
+      <a onclick="ShowSection('section2')" href="#">Section 2</a>
+      <a onclick="ShowSection('section3')" href="#">Section 3</a>
+      <a onclick="ShowSection('section4')" href="#">Section 3</a>
+    </header>
+    <nav>
+      Nav
+    </nav>
+    <section id="section1">
+      Section1
+    </section>
+     <section id="section2">
+      Section2
+    </section>
+     <section id="section3">
+      Section3
+    </section>
+     <section id="section4">
+      Section4
+    </section>
+
+    <aside>
+      Aside
+    </aside>
+    <footer>
+      Footer
+    </footer>
+</body>
+</html>

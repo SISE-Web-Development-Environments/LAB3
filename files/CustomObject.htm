@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<title>Custom Object</title>
+	<script type="text/javascript">
+	
+		function Square(sideLengh){
+			this.SideLength = sideLengh;
+			this.Area = function()
+			{
+				return this.SideLength *this.SideLength;
+			}
+		}
+		
+		var lengthString = window.prompt("enter square side length");
+		var length= parseInt(lengthString);
+		var mySquare=new Square(length);
+		var area=mySquare.Area();
+		window.alert("The area is: " + area);
+	</script>
+</head>
+
+<body>
+
+</body>
+
+</html>
